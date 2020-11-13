@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora&family=Montserrat:wght@300;500;600;700&display=swap");
+
+:root {
+  /* Colors */
+  --bg-color: #121212;
+  --elevated-bg-color: #1d1d1d;
+
+  /* Font family */
+  --secondary-font: "Lora", serif;
+  --primary-font: "Montserrat", sans-serif;
+  --accent-font: "Crimson Pro", serif;
+  /* Font size */
+  --bold: 700;
+  --semi-bold: 600;
+  --medium: 500;
+  --regular: 400;
+  --light: 300;
+
+  /* Breakpoints */
+  --mobile: 400px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 42px 77px;
+  background-color: var(--bg-color);
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header > div {
+  border: 1px solid white;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 8px;
+}
+
+header nav ul {
+  margin: 4px 0;
+  display: flex;
+}
+
+header nav li {
+  margin-left: 86px;
+}
+
+nav li a {
+  font-family: var(--primary-font);
+  font-weight: var(--medium);
+  font-size: 18px;
+}
+
+nav li:first-child a {
+  font-weight: var(--bold);
+}
+
+button.material-icons {
+  background-color: transparent;
+  color: white;
+  border: none;
+  display: none;
+}
+
+h1 {
+  font-family: var(--secondary-font);
+  font-size: 3rem;
+}
+
+main {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+main section {
+  font-family: var(--primary-font);
+}
+
+/* Modern interior paragraph */
+main > section p {
+  font-weight: var(--light);
+  width: 410px;
+  font-size: 24px;
+}
+
+/* Read more link */
+main > section a {
+  margin-top: 48px;
+  font-weight: var(--semi-bold);
+  display: flex;
+  gap: 12px;
+  place-items: center;
+}
+
+/* Large image */
+main section > img {
+  width: 100%;
+}
+
+/* Right-side section */
+main section:last-child {
+  position: relative;
+  font-weight: var(--medium);
+}
+
+/* Small card */
+main section:last-child > div {
+  position: absolute;
+  right: 32px;
+  transform: translateY(-50%);
+  padding: 28px;
+  background-color: var(--elevated-bg-color);
+  width: 410px;
+  height: 189px;
+  display: grid;
+  column-gap: 19px;
+  grid-template-columns: 50px auto;
+  border-radius: 8px;
+}
+
+/* Avatar */
+main section:last-child div img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+#name {
+  font-weight: var(--medium);
+}
+
+/* Job title */
+main section:last-child div span {
+  font-size: 12px;
+  color: #828282;
+}
+
+#copyright {
+  font-family: var(--secondary-font);
+  font-weight: var(--bold);
+  font-size: 1.5rem;
+  width: 280px;
+}
+
+footer {
+  color: #a9a9a9;
+  text-align: center;
+  margin: 160px auto 48px;
+  font-family: var(--primary-font);
+  font-weight: var(--semi-bold);
+}
+
+@media (min-width: 1025px) {
+  main {
+    gap: 150px;
+  }
+}
+
+@media (orientation: portrait), (max-width: 768px) {
+  body {
+    padding: 12px 19px;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  /* Right-side section */
+  main section:last-child {
+    margin-top: 37px;
+  }
+}
+
+@media (orientation: portrait) {
+  header nav {
+    display: none;
+  }
+
+  body > section {
+    display: none;
+    background-color: var(--elevated-bg-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    clip-path: circle(0px at calc(100vw - 37px) 30px);
+    transition: ease-out 300ms;
+  }
+
+  body > section button {
+    position: fixed;
+    width: 38px;
+    height: 38px;
+    right: 12px;
+    top: 14px;
+    z-index: 1000;
+  }
+
+  body > section nav {
+    display: grid;
+    place-items: center;
+    height: 100%;
+  }
+
+  body > section ul {
+    padding: 0;
+  }
+
+  body > section ul li {
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  button.material-icons {
+    display: block;
+  }
+
+  main {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  main > section p {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  /* Read more link */
+  main > section a {
+    margin-top: 25px;
+    font-size: 14px;
+  }
+
+  /* Small Card */
+  main section:last-child > div {
+    width: 80%;
+    column-gap: 0;
+    padding: 25px 19px 0;
+    height: 138px;
+  }
+
+  main section:last-child > div div {
+    width: 80%;
+    column-gap: 0;
+  }
+
+  /* Avatar */
+  main section:last-child div img {
+    width: 36px;
+    height: 36px;
+  }
+
+  #name {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  /* Job title */
+  main section:last-child div span {
+    font-size: 10px;
+  }
+
+  #copyright {
+    width: 210px;
+    font-size: 18px;
+    margin: 0;
+  }
+
+  footer {
+    position: relative;
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
+
+  footer:before {
+    content: "";
+    position: absolute;
+    top: -9.5px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid #a9a9a9;
+  }
+
+  /* Menu display animation */
+  .show {
+    clip-path: circle(700px at calc(100vw - 37px) 30px);
+  }
+
+  .collapse {
+    transition-delay: 500ms;
+    clip-path: circle(0px at calc(100vw - 37px) 30px);
+  }
+}
