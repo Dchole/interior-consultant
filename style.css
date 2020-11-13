@@ -99,14 +99,14 @@ main section {
 }
 
 /* Modern interior paragraph */
-main > section p {
+main section:first-child p {
   font-weight: var(--light);
   width: 410px;
   font-size: 24px;
 }
 
 /* Read more link */
-main > section a {
+main section:first-child a {
   margin-top: 48px;
   font-weight: var(--semi-bold);
   display: flex;
