@@ -249,13 +249,13 @@ footer {
     margin-top: 10px;
   }
 
-  main > section p {
+  main section:first-child p {
     width: 100%;
     font-size: 14px;
   }
 
   /* Read more link */
-  main > section a {
+  main section:first-child a {
     margin-top: 25px;
     font-size: 14px;
   }
