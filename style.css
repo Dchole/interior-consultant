@@ -168,7 +168,7 @@ main section:last-child div span {
 footer {
   color: #a9a9a9;
   text-align: center;
-  margin: 160px auto 48px;
+  margin: 160px auto 0;
   font-family: var(--primary-font);
   font-weight: var(--semi-bold);
 }
