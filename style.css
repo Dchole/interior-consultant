@@ -312,6 +312,7 @@ footer {
   }
 
   .collapse {
+    transition-timing-function: ease-in;
     transition-delay: 500ms;
     clip-path: circle(0px at calc(100vw - 37px) 30px);
   }

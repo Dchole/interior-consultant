@@ -46,5 +46,5 @@ CLOSE_BTN.addEventListener("click", _ => {
 
   setTimeout(() => {
     COLLAPSED_MENU.style.display = "none";
-  }, 802);
+  }, 800);
 });
