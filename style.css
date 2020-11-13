@@ -150,6 +150,7 @@ main section:last-child div img {
 #name {
   margin: 0;
   font-weight: var(--medium);
+  font-size: 14px;
 }
 
 /* Job title */
